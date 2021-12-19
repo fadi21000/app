@@ -1,0 +1,78 @@
+
+$backguondcolor:rgb(255, 255, 255);
+$font-black:rgb(17, 17, 17);
+$component-color:#9e9d9d;
+$shadows:#000000;
+$alerts:#8A8A8A;
+$com-sh:#fdfcfc21;
+
+$bg-one-sctiton : rgba(253, 253, 253, 0.782);
+
+$button-backgroundcolor:#0e8847;
+// fonts
+$fontFamily:Droid Arabic Naskh,'tahoma';
+
+$font-white:rgb(255, 255, 255);
+$font-title-color:rgb(243, 60, 47);
+// cards color
+// the blue card
+$header-card-blue:#0c54bf;
+$body-card-blue:#1963d3;
+// the pink card
+$header-card-pink: #b5044e;
+$body-card-pink:#da0f64;
+// the orenge card
+$header-card-orenge:#d56505;
+$body-card-orenge:#fc831b;
+// the green card
+$header-card-green:#02a149;
+$body-card-green:#0cbd5c;
+//  this is the phone menu color
+$bg-phone-mu:#6c757d;
+/* Color Theme Swatches in RGBA */
+$My-Color-Theme-1-rgba: rgba(250,117,43, 1);
+$My-Color-Theme-2-rgba: rgba(222,77,38, 1);
+
+$My-Color-Theme-4-rgba: rgba(222,38,88, 1);
+$My-Color-Theme-5-rgba: rgba(250,43,203, 1);
+// gallery text
+$gallery-p-text:rgb(237, 237, 126); 
+
+
+%flexbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+// fonts mixin
+@mixin font-color-header{
+    color: text-color($header-title-background);
+}
+@mixin font-color{
+    color: text-color($backguondcolor);
+}
+@mixin title-color{
+    color: $font-title-color;
+}
+
+
+@function text-color($My-Color){
+
+    @if(lightness($My-Color) > 70){
+        @return  rgba(17, 17, 17, 0.864) ;
+    } @else{
+        @return rgba(237, 245, 253, 0.85);
+    }
+}
+
+
+@function dark-color($MyColor){
+    @if(lightness($MyColor) > 70){
+      @return rgb(255, 255, 255);
+    } @else{
+        @return rgb(30, 45, 77);
+    }
+}
+$header-title-background:  dark-color($bg-one-sctiton) ;
+$backguondcolor:dark-color($bg-one-sctiton) ;
+
