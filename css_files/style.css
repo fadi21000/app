@@ -494,6 +494,7 @@ main .work-section .container .container-cards .style-cards {
   font-family: Droid Arabic Naskh, "tahoma";
   font-weight: 400;
   border-radius: 20px;
+  z-index: 3;
 }
 
 main .work-section .container .container-cards .style-body-cards {
