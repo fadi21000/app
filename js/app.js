@@ -1,5 +1,9 @@
-
+$(window).on("load", function(){
+    $(".loder").fadeOut(1000);
+    $(".content").fadeIn(1000);
+    });
 $(document).ready(function (){
+
     // open the phone list
 $(".open-list").click(function () { 
     $(".full-screen").show();
@@ -50,10 +54,13 @@ $(".li-s-container").click(function () {
 $(window).scroll(function(){
 var windowsScroll=$(this).scrollTop();
 
-    if(windowsScroll > 100){
+    if(windowsScroll > 70){
         $("header").addClass("c-header");
+        
     }else{
+        
         $("header").removeClass("c-header");
+
     }
 
 });
@@ -147,9 +154,9 @@ if(variableValue.getPropertyValue("--fontColor") == "black" )
     rootElement.style.setProperty('--bgckHeaderColor', 'rgb(24 29 42)');
     rootElement.style.setProperty('--headerFontColor' , 'white');
     rootElement.style.setProperty('--oneSectionBgColor' , 'rgb(24 29 42 / 89%)');
-    rootElement.style.setProperty('--backgroundColor' , 'rgb(10 11 16 / 82%)');
-    rootElement.style.setProperty('--titleFontColor' ,'rgb(248, 30, 30)');
-    window.reloa
+    rootElement.style.setProperty('--backgroundColor' , 'rgb(49 54 76)');
+    rootElement.style.setProperty('--titleFontColor' ,'rgb(248 30 30)');
+    
     
 }
 else{

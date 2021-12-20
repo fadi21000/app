@@ -25,13 +25,43 @@
         width: 60px;
         height: 5px;
         background-color: rgb(59, 212, 123);
-        margin: 10px auto 100px auto;
+        margin: 10px auto 50px auto;
     }
     body{
         max-width: 100%;
         width: 100% !important;
         background:var(--backgroundColor);
         
+    }
+    .content{
+        display:none;
+    }
+    .loder{
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        background-color: #000b1e;
+        
+        div{
+            width: 100px;
+            height: 100px;
+            border: 15px solid rgb(145, 145, 145);
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-top-color: rgb(255, 42, 42);
+            border-radius: 50%;
+            animation:anim 1s infinite linear;
+
+        }
+    }
+    @keyframes anim {
+        100%{
+            transform: rotate(360deg);
+        }
     }
     .unified-title{
         text-align: center;
@@ -75,6 +105,22 @@
         min-height: 100vh;
         padding: 60px 0px;
      }
+     .dark_mod_container{
+        width: 38px;
+        height: 38px;
+        border: 0;
+        text-align: center;
+        border-radius:50%;
+        margin: 0px 20px;
+        background-color: #161616;
+        .dark_mod {
+            font-size: 30px;
+            line-height:38px;
+            color: rgb(255, 255, 255);
+            
+        }
+
+    }
 
 
     header{
@@ -115,22 +161,7 @@
                     justify-content: end;
                     align-items: center;
                     
-                    .dark_mod_container{
-                        width: 38px;
-                        height: 38px;
-                        border: 0;
-                        text-align: center;
-                        border-radius:50%;
-                        margin: 0px 20px;
-                        background-color: #161616;
-                        .dark_mod {
-                            font-size: 30px;
-                            line-height:38px;
-                            color: rgb(255, 255, 255);
-                            
-                        }
-    
-                    }
+                    
     
                      .con-menu{
                         width: 100%;
@@ -396,6 +427,7 @@
                                         line-height: 2;
                                         font-weight: 400;
                                         font-size: 18px;
+                                        box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(26, 26, 26, 0);
                                     }
                                     .card-work-1{
                                         max-width: 300px;
@@ -708,6 +740,10 @@
                             flex-wrap: wrap;
                             margin-top: 50px;
                             padding: 10px;
+                            img{
+                                max-width: 130px;
+                                opacity: 0.7;
+                            }
 
                         }
                     }
